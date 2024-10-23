@@ -10,9 +10,8 @@ jobs:
     steps: # список шагов, которые надо выполнить
       # экшен — выполняет какую-то задачу
       # checkout — клонирует репозиторий
+      - uses: make setup
       # run – произвольная bash-команда
       # ls -la выведет содержимое текущего репозитория
-      - run: make setup
-      - run: make start
       - run: make test
       - run: make lint
